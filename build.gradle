@@ -1,0 +1,33 @@
+plugins {
+    id 'java'
+}
+
+group = 'fr.anthonus'
+version = '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+
+    //DotEnv
+    implementation("io.github.cdimascio:dotenv-java:3.2.0")
+
+    //JDA
+    implementation("net.dv8tion:JDA:5.5.1") {
+        exclude module: 'opus-java'
+    }
+        //LogBack
+        implementation("ch.qos.logback:logback-classic:1.5.18")
+
+    //gson
+    implementation 'com.google.code.gson:gson:2.13.1'
+
+    testImplementation platform('org.junit:junit-bom:5.10.0')
+    testImplementation 'org.junit.jupiter:junit-jupiter'
+}
+
+test {
+    useJUnitPlatform()
+}
