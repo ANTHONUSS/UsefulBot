@@ -32,6 +32,19 @@ public class LOGs {
         System.out.println(ansiCode + timeMessage + logTypeName + " ==> " + message + resetCode);
     }
 
+    public static void sendThreadedLog(String message, LogType logType) {
+        String threadedMessage = "[THREADED] ";
+
+        String timeMessage = "[" + java.time.LocalTime.now().toString().substring(0, 11) + "] ";
+
+        String logTypeName = "[" + logType.getName() + "]";
+        String ansiCode = logType.getAnsiCode();
+
+        String resetCode = "\u001B[0m";
+
+        System.out.println(ansiCode + threadedMessage + timeMessage + logTypeName + " ==> " + message + resetCode);
+    }
+
     /**
      * Creates an ANSI color code string.
      *

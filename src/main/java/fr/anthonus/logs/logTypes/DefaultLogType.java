@@ -15,14 +15,16 @@ public enum DefaultLogType implements LogType {
     DEFAULT("DEFAULT", LOGs.createAnsiCode(Color.WHITE, false, false, false)),
     ERROR("ERROR", LOGs.createAnsiCode(Color.RED, false, false, false)),
     WARNING("WARNING", LOGs.createAnsiCode(Color.YELLOW, false, false, false)),
-    DEBUG("DEBUG", LOGs.createAnsiCode(255, 171, 247, false, false, false)),
+    DEBUG("DEBUG", LOGs.createAnsiCode(255, 171, 247, false, true, false)),
 
     LOADING("LOADING", LOGs.createAnsiCode(53, 74, 255, false, false, false)),
     FILE_LOADING("FILE_LOADING", LOGs.createAnsiCode(0, 0, 0, 130, 0, 255, false, false, false)),
 
     COMMAND("COMMAND", LOGs.createAnsiCode(255, 172, 53, false, false, false)),
 
-    DOWNLOAD("DOWNLOAD", LOGs.createAnsiCode(0, 0, 0, 141, 255, 252, false, false, false)),;
+    DOWNLOAD("DOWNLOAD", LOGs.createAnsiCode(141, 255, 252, false, false, false)),
+    DOWNLOAD_CMD("DOWNLOAD CMD", LOGs.createAnsiCode(0, 0, 0, 141, 255, 252, false, false, false)),
+    ERROR_CMD("ERROR CMD", LOGs.createAnsiCode(Color.BLACK, Color.RED, false, false, false));
 
     private final String name;
     private final String ansiCode;
