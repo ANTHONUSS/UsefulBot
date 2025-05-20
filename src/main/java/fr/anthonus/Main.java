@@ -76,12 +76,10 @@ public class Main {
         CommandListUpdateAction commands = jda.updateCommands();
         commands.addCommands(
                 Commands.slash("ping", "Ping le bot"),
-                        //.setContexts(EnumSet.of(InteractionContextType.BOT_DM)),
 
                 Commands.slash("download", "Télécharge une vidéo Youtube")
                         .addOption(STRING, "lien", "Lien de la vidéo Youtube", true)
                         .addOption(BOOLEAN, "musique", "Télécharger la musique ?", true)
-                        //.setContexts(EnumSet.of(InteractionContextType.BOT_DM))
         );
         commands.queue();
         LOGs.sendLog("Commandes chargées !", DefaultLogType.LOADING);

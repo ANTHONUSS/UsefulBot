@@ -200,7 +200,7 @@ public class DownloadCommand extends Command {
             return;
         }
 
-        currentEvent.getHook().editOriginal("## :arrow_up: upload de `" + videoFile.getName() + "` en cours...").queue();
+        currentEvent.getHook().editOriginal("## :arrow_up: Upload de `" + videoFile.getName() + "` en cours...").queue();
 
         LOGs.sendThreadedLog("Déplacement du fichier vers le dossier de partage...", DefaultLogType.DOWNLOAD);
         Path source = Paths.get(videoFile.getAbsolutePath());
@@ -219,7 +219,7 @@ public class DownloadCommand extends Command {
         musicURI = musicURI.replace("+", "%20");
         LOGs.sendThreadedLog("Lien de partage créé : " + musicURI, DefaultLogType.DOWNLOAD);
 
-        currentEvent.getHook().editOriginal("## :white_check_mark: Upload terminé !\n" +
+        currentEvent.getHook().editOriginal("## :white_check_mark: Téléchargement de "+ videoFile.getName() +" terminé !\n" +
                         "Voici le lien de téléchargement : " + musicURI)
                 .queue();
         LOGs.sendThreadedLog("Upload terminé !", DefaultLogType.DOWNLOAD);

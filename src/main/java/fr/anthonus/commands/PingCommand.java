@@ -15,5 +15,6 @@ public class PingCommand extends Command {
     public void run() {
         long ping = currentEvent.getJDA().getGatewayPing();
         currentEvent.reply("Pong! `" + ping + " ms`").queue();
+        LOGs.sendLog("Ping: " + ping + " ms", DefaultLogType.COMMAND);
     }
 }
