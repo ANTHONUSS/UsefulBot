@@ -21,6 +21,7 @@ public enum DefaultLogType implements LogType {
     FILE_LOADING("FILE_LOADING", LOGs.createAnsiCode(0, 0, 0, 130, 0, 255, false, false, false)),
 
     COMMAND("COMMAND", LOGs.createAnsiCode(255, 172, 53, false, false, false)),
+    AUTO_COMMAND("AUTOCOMMAND", LOGs.createAnsiCode(255, 172, 53, true, false, false)),
 
     DOWNLOAD("DOWNLOAD", LOGs.createAnsiCode(141, 255, 252, false, false, false)),
     DOWNLOAD_CMD("DOWNLOAD CMD", LOGs.createAnsiCode(0, 0, 0, 141, 255, 252, false, false, false)),
